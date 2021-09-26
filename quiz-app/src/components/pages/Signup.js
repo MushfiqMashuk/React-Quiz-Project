@@ -1,3 +1,4 @@
+import signupImage from "../../assets/images/signup.svg";
 import classes from "../../styles/Signup.module.css";
 import Button from "../Button";
 import Checkbox from "../Checkbox";
@@ -11,7 +12,7 @@ export default function Signup() {
     <>
       <h1>Create an Account</h1>
       <div className="column">
-        <Illustration />
+        <Illustration alt="Signup" src={signupImage} />
 
         <Form className={`${classes.signup}`}>
           <TextInput type="text" placeholder="Enter Name" icon="person" />
@@ -19,7 +20,7 @@ export default function Signup() {
           <TextInput
             type="text"
             placeholder="Enter Email"
-            icon="alternate-email"
+            icon="alternate_email"
           />
 
           <TextInput type="password" placeholder="Enter Password" icon="lock" />
@@ -32,7 +33,9 @@ export default function Signup() {
 
           <Checkbox text="I agree to the Terms &amp; Conditions" />
 
-          <Button>Submit Now</Button>
+          <Button>
+            <span>Submit Now</span>
+          </Button>
           <Info />
         </Form>
       </div>

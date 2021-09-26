@@ -1,10 +1,9 @@
-import signupImage from "../assets/images/signup.svg";
 import classes from "../styles/Illustration.module.css";
 
-export default function Illustration() {
+export default function Illustration({ alt, ...rest }) {
   return (
     <div className={classes.illustration}>
-      <img src={signupImage} alt="Sign Up" />
+      <img {...rest} alt={alt} />
     </div>
   );
 }
