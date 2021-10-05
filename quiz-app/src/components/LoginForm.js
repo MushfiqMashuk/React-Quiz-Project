@@ -8,9 +8,9 @@ import TextInput from "./TextInput";
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState();
 
   const [error, setError] = useState();
-  const [loading, setLoading] = useState();
 
   const { login } = useAuth();
   const history = useHistory();
@@ -21,8 +21,8 @@ export default function LoginForm() {
     try {
       setError("");
       setLoading(true);
-
       await login(email, password);
+
       history.push("/");
     } catch (err) {
       console.log(err);

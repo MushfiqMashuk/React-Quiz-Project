@@ -69,7 +69,7 @@
   background: var(--fontPrimary);
   border-radius: 20px;
   position: relative;
-  transition: width 0.3s ease;
+  transition: width 0.30s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .progress::after {
